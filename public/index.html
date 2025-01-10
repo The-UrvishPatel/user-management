@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for proper rendering and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the page -->
+    <title>User Management</title>
+
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main container for the User Management System -->
+    <div class="container">
+
+        <!-- Header for the page -->
+        <h1>User Management System</h1>
+
+        <!-- Section for displaying responses (like success or error messages) -->
+        <div id="response" class="response"></div>
+
+        <!-- Section for creating a new user -->
+        <section class="form-section">
+            <h2>Create User</h2>
+            <!-- Form to create a new user -->
+            <form id="createUserForm">
+                <!-- Input field for user's name -->
+                <input type="text" id="name" placeholder="Name" required>
+
+                <!-- Input field for user's email -->
+                <input type="email" id="email" placeholder="Email" required>
+
+                <!-- Dropdown to select user's role -->
+                <select id="role" required>
+                    <option value="">Select Role</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Editor">Editor</option>
+                    <option value="Viewer">Viewer</option>
+                </select>
+
+                <!-- Button to submit the form and create the user -->
+                <button type="submit">Create User</button>
+            </form>
+        </section>
+
+        <!-- Section for viewing all users -->
+        <section class="users-section">
+            <h2>All Users</h2>
+            <!-- Button to fetch and display all users -->
+            <button id="getUsersButton">Get All Users</button>
+
+            <!-- Unordered list where users will be displayed -->
+            <ul id="usersList"></ul>
+        </section>
+
+        <!-- Section for deleting an existing user -->
+        <section class="delete-section">
+            <h2>Delete User</h2>
+            <!-- Input field to specify the user ID to delete -->
+            <input type="number" id="userIdToDelete" placeholder="User ID" required>
+
+            <!-- Button to delete the specified user -->
+            <button id="deleteUserButton">Delete User</button>
+        </section>
+    </div>
+
+    <!-- External JavaScript file for interactivity -->
+    <script src="script.js"></script>
+</body>
+
+</html>
